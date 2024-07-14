@@ -13,7 +13,7 @@
 
     <style>
         /* Estilos gerais para todos os dispositivos */
-        body {
+         body  {
             font-family: 'Roboto', sans-serif;
             background-color: lightgray;
             margin: 0;
@@ -44,10 +44,12 @@
             padding: 0;
             text-align: center;
             margin: 0;
+            display: flex; /* Torna os itens de navegação em linha */
+            justify-content: center; /* Alinha os itens ao centro */
         }
 
         nav ul li {
-            display: inline;
+            display: inline-block; /* Exibe os itens como blocos em linha */
             margin: 0 10px;
         }
 
@@ -56,6 +58,8 @@
             color: #fff;
             font-weight: bold;
             font-size: 18px;
+            display: block; /* Transforma o link em bloco para ocupar todo o espaço do li */
+            padding: 10px; /* Adiciona espaço interno ao redor do texto */
         }
 
         nav ul li a:hover {
@@ -75,6 +79,23 @@
             padding: 5px 0;
             text-align: center;
         }
+
+        /* Media query para telas menores, como smartphones */
+        @media only screen and (max-width: 500px) {
+            nav ul {
+                flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo */
+                justify-content: center; /* Alinha os itens ao centro */
+            }
+
+            nav ul li {
+                margin: 5px; /* Espaçamento menor entre os itens */
+            }
+
+            nav ul li a {
+                font-size: 18px; /* Tamanho da fonte menor */
+                padding: 7px; /* Espaçamento interno menor */
+            }
+        }
     </style>
 </head>
 
@@ -87,7 +108,7 @@
                 <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
                 <li><a href="servicos.html"><i class="fa fa-cogs"></i> Serviços</a></li>
                 <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfólio</a></li>
-                <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+                <li><a href="contato.html"><i class="fab fa-whatsapp"></i>Contato</a></li>
 				 <li><a href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a></li>
             </ul>
         </nav>
