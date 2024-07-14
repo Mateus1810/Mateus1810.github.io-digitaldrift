@@ -44,10 +44,12 @@
             padding: 0;
             text-align: center;
             margin: 0;
+            display: flex; /* Torna os itens de navegação em linha */
+            justify-content: center; /* Alinha os itens ao centro */
         }
 
         nav ul li {
-            display: inline;
+            display: inline-block; /* Exibe os itens como blocos em linha */
             margin: 0 10px;
         }
 
@@ -56,6 +58,8 @@
             color: #fff;
             font-weight: bold;
             font-size: 18px;
+            display: block; /* Transforma o link em bloco para ocupar todo o espaço do li */
+            padding: 10px; /* Adiciona espaço interno ao redor do texto */
         }
 
         nav ul li a:hover {
@@ -78,27 +82,18 @@
 
         /* Media query para telas menores, como smartphones */
         @media only screen and (max-width: 600px) {
-            header {
-                padding: 5px 0;
-            }
-
             nav ul {
-                display: block;
-                text-align: center;
+                flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo */
+                justify-content: center; /* Alinha os itens ao centro */
             }
 
             nav ul li {
-                display: block;
-                margin: 10px 0;
+                margin: 5px; /* Espaçamento menor entre os itens */
             }
 
             nav ul li a {
-                font-size: 16px;
-            }
-
-            section {
-                padding: 10px;
-                margin: 10px;
+                font-size: 14px; /* Tamanho da fonte menor */
+                padding: 8px; /* Espaçamento interno menor */
             }
         }
     </style>
