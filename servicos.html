@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
+        /* Estilos gerais para todos os dispositivos */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: lightgray;
@@ -43,10 +44,12 @@
             padding: 0;
             text-align: center;
             margin: 0;
+            display: flex; /* Torna os itens de navegação em linha */
+            justify-content: center; /* Alinha os itens ao centro */
         }
 
         nav ul li {
-            display: inline-block;
+            display: inline-block; /* Exibe os itens como blocos em linha */
             margin: 0 10px;
         }
 
@@ -55,6 +58,8 @@
             color: #fff;
             font-weight: bold;
             font-size: 18px;
+            display: block; /* Transforma o link em bloco para ocupar todo o espaço do li */
+            padding: 10px; /* Adiciona espaço interno ao redor do texto */
         }
 
         nav ul li a:hover {
@@ -75,15 +80,20 @@
             text-align: center;
         }
 
-        @media (max-width: 768px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
+        /* Media query para telas menores, como smartphones */
+        @media only screen and (max-width: 600px) {
+            nav ul {
+                flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo */
+                justify-content: center; /* Alinha os itens ao centro */
             }
 
-            nav ul {
-                padding: 10px;
-                background-color: #333;
+            nav ul li {
+                margin: 5px; /* Espaçamento menor entre os itens */
+            }
+
+            nav ul li a {
+                font-size: 14px; /* Tamanho da fonte menor */
+                padding: 8px; /* Espaçamento interno menor */
             }
         }
     </style>
@@ -91,7 +101,7 @@
 
 <body>
     <header>
-        <h1 class="roboto-bold">Digital Drift Soluções</h1>
+        <h1 class="roboto-bold">Serviços</h1>
         <nav>
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -99,19 +109,19 @@
                 <li><a href="servicos.html"><i class="fa fa-cogs"></i> Serviços</a></li>
                 <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfólio</a></li>
                 <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
-                <li><a href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a></li>
+				 <li><a href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="servicos">
         <h2 class="roboto-medium">Serviços</h2>
-        <p class="roboto-regular">Oferecemos uma ampla gama de serviços para ajudar você a criar um site que atenda às suas necessidades. Desde o design até o desenvolvimento, estamos aqui para ajudar.</p>
+        <p class="roboto-regular">Oferecemos uma variedade de serviços personalizados, incluindo desenvolvimento web e design gráfico. Nossa equipe está aqui para ajudar a transformar suas ideias em realidade.</p>
     </section>
-
-    <footer>
+<footer>
         <p class="roboto-light">&copy; 2024 Digital Drift Soluções. Todos os direitos reservados.</p>
     </footer>
 </body>
 
 </html>
+   
