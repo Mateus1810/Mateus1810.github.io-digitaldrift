@@ -13,7 +13,7 @@
 
     <style>
         /* Estilos gerais para todos os dispositivos */
-         body  {
+        body {
             font-family: 'Roboto', sans-serif;
             background-color: lightgray;
             margin: 0;
@@ -44,12 +44,12 @@
             padding: 0;
             text-align: center;
             margin: 0;
-            display: flex; /* Torna os itens de navegação em linha */
-            justify-content: center; /* Alinha os itens ao centro */
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline-block; /* Exibe os itens como blocos em linha */
+            display: inline-block;
             margin: 0 10px;
         }
 
@@ -58,12 +58,12 @@
             color: #fff;
             font-weight: bold;
             font-size: 18px;
-            display: block; /* Transforma o link em bloco para ocupar todo o espaço do li */
-            padding: 10px; /* Adiciona espaço interno ao redor do texto */
+            display: block;
+            padding: 10px;
         }
 
         nav ul li a:hover {
-            color: #f00;
+            color: cyan;
         }
 
         section {
@@ -80,21 +80,58 @@
             text-align: center;
         }
 
-        /* Media query para telas menores, como smartphones */
-        @media only screen and (max-width: 500px) {
-            nav ul {
-                flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo */
-                justify-content: center; /* Alinha os itens ao centro */
+        @media only screen and (max-width: 800px) {
+            .catalogue {
+                flex-direction: column;
+                align-items: center; /* Centraliza os itens na vertical */
             }
 
-            nav ul li {
-                margin: 5px; /* Espaçamento menor entre os itens */
+            .catalogue-item {
+                width: 100%; /* Ocupa toda a largura disponível */
+                max-width: 300px; /* Define uma largura máxima */
             }
+        }
 
-            nav ul li a {
-                font-size: 18px; /* Tamanho da fonte menor */
-                padding: 7px; /* Espaçamento interno menor */
-            }
+        .catalogue {
+            display: flex;
+            flex-direction: row; /* Exibe os itens em linha */
+            align-items: flex-start; /* Alinha os itens à esquerda */
+            justify-content: center; /* Centraliza os itens horizontalmente */
+            gap: 20px; /* Espaço entre os itens */
+        }
+
+        .catalogue-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #fff;
+            width: 250px; /* Largura do item */
+        }
+
+        .catalogue-item img {
+            width: 100%; /* Imagem ocupa 100% da largura do item */
+            height: auto; /* Altura automática proporcional */
+            border-radius: 5px 5px 0 0; /* Borda arredondada apenas no topo */
+            cursor: pointer; /* Cursor de ponteiro ao passar por cima */
+        }
+
+        .catalogue-item a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .catalogue-item button {
+            background-color: #25d366;
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 0 0 5px 5px; /* Borda arredondada apenas na base */
+            cursor: pointer;
         }
     </style>
 </head>
@@ -108,8 +145,7 @@
                 <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
                 <li><a href="servicos.html"><i class="fa fa-cogs"></i> Serviços</a></li>
                 <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfólio</a></li>
-                <li><a href="contato.html"><i class="fab fa-whatsapp"></i>Contato</a></li>
-				 <li><a href="cadastro.html"><i class="fas fa-user-plus"></i> Cadastro</a></li>
+                <li><a href="contato.html"><i class="fas fa-comments"></i> Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -117,11 +153,27 @@
     <section id="servicos">
         <h2 class="roboto-medium">Serviços</h2>
         <p class="roboto-regular">Oferecemos uma variedade de serviços personalizados, incluindo desenvolvimento web e design gráfico. Nossa equipe está aqui para ajudar a transformar suas ideias em realidade.</p>
+        
+        <div class="catalogue">
+            <div class="catalogue-item">
+                <a href="https://wa.me/5533984024108?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20a%20manutenção%20de%20computadores">
+                    <img src="img/png-transparent-laptop-computer-icons-computer-desktop-pc-cdr-electronics-computer.png" alt="Ícone">
+                </a>
+                <button>Manutenção de Computadores</button>
+            </div>
+            <div class="catalogue-item">
+                <a href="https://wa.me/5533984024108?text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20outro%20serviço">
+                    <img src="img/png-transparent-laptop-computer-icons-computer-desktop-pc-cdr-electronics-computer.png" alt="Ícone">
+                </a>
+                <button>Outro Exemplo</button>
+            </div>
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
     </section>
-<footer>
-        <p class="roboto-light">&copy; 2024 Digital Drift Soluções. Todos os direitos reservados.</p>
+
+    <footer>
+        <p class="roboto-regular">&copy; 2024 Digital Drift Soluções. Todos os direitos reservados.</p>
     </footer>
 </body>
 
 </html>
-   

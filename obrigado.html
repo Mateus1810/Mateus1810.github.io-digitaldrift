@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu Nome - Criação de Sites</title>
+    <title>Obrigado - Digital Drift Soluções</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        body  {
+        /* Estilos gerais para todos os dispositivos */
+        body {
             font-family: 'Roboto', sans-serif;
             background-color: lightgray;
             margin: 0;
@@ -43,22 +44,22 @@
             padding: 0;
             text-align: center;
             margin: 0;
-            display: flex; /* Torna os itens de navegação em linha */
-            justify-content: center; /* Alinha os itens ao centro */
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline-block; /* Exibe os itens como blocos em linha */
+            display: inline-block;
             margin: 0 10px;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #333;
             font-weight: bold;
-            font-size: 18px;
-            display: block; /* Transforma o link em bloco para ocupar todo o espaço do li */
-            padding: 10px; /* Adiciona espaço interno ao redor do texto */
+            font-size: 28px; /* Aumenta o tamanho da fonte */
+            display: block;
+            padding: 20px 30px; /* Ajusta o padding para dar mais espaço ao botão */
         }
 
         nav ul li a:hover {
@@ -70,6 +71,15 @@
             background-color: #fff;
             margin: 20px;
             border-radius: 5px;
+            text-align: center; /* Centraliza o texto */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 180px); /* Ajusta a altura para ocupar a tela inteira menos cabeçalho e rodapé */
+            background-image: url('img/vecteezy_colorful-party-tinsel-and-confetti-falling-png-confetti-png_22993683.png'); /* Substitua pelo caminho da sua imagem */
+            background-size: cover; /* Ajusta para cobrir todo o espaço do elemento */
+            background-position: center; /* Centraliza a imagem */
         }
 
         footer {
@@ -79,48 +89,40 @@
             text-align: center;
         }
 
-        /* Media query para telas menores, como smartphones */
         @media only screen and (max-width: 500px) {
             nav ul {
-                flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo */
-                justify-content: center; /* Alinha os itens ao centro */
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             nav ul li {
-                margin: 5px; /* Espaçamento menor entre os itens */
+                margin: 5px;
             }
 
             nav ul li a {
-                font-size: 18px; /* Tamanho da fonte menor */
-                padding: 7px; /* Espaçamento interno menor */
+                font-size: 24px;
+                padding: 15px 20px;
             }
         }
     </style>
 </head>
 
 <body>
-</span>
     <header>
-        <h1 class="roboto-bold">Digital Drift Soluções</h1>
+        <h1 class="roboto-bold">Digital Drift</h1>
+    </header>
+
+    <section id="obrigado" class="background-image-section">
+        <h2 class="roboto-medium">Obrigado pela preferência! Volte sempre!</h2>
         <nav>
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
-                <li><a href="servicos.html"><i class="fa fa-cogs"></i> Serviços</a></li>
-                <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfólio</a></li>
-               <li><a href="contato.html"><i class="fas fa-comments"></i>Contato</a></li>
-                
             </ul>
         </nav>
-    </header>
-
-    <section id="home">
-        <h2 class="roboto-medium">Home</h2>
-        <p class="roboto-regular">Bem-vindo à página inicial do nosso site. Aqui você encontrará informações sobre nossos serviços e como podemos ajudar você a criar um site incrível.</p>
     </section>
 
     <footer>
-        <p class="roboto-light">&copy; 2024 Digital Drift Soluções. Todos os direitos reservados.</p>
+        <p class="roboto-regular">&copy; 2024 Digital Drift Soluções. Todos os direitos reservados.</p>
     </footer>
 </body>
 
