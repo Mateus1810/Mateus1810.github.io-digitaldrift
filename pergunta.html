@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pergunta - Digital Drift Soluções</title>
+    <title>Informações do Cliente - Digital Drift Soluções</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <style>
-        body {
+         body {
             font-family: 'Roboto', sans-serif;
-            background-color: lightgray;
+            background-image: url('img/vecteezy_colorful-party-tinsel-and-confetti-falling-png-confetti-png_22993683.png'); /* Caminho da sua imagem */
+            background-size: cover; /* Ajusta para cobrir todo o espaço */
+            background-position: center; /* Centraliza a imagem */
             margin: 0;
             padding: 0;
             display: flex;
@@ -23,7 +25,7 @@
         }
 
         .form-container {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -32,6 +34,12 @@
         .form-container h1 {
             font-weight: 500;
             margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container h4 {
+            font-weight: 400;
+            margin-bottom: 10px;
             text-align: center;
         }
 
@@ -56,22 +64,39 @@
             cursor: pointer;
             font-size: 16px;
         }
+		/* Media query para telas menores, como smartphones */
+        @media only screen and (max-width: 500px) {
+            nav ul {
+                flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo */
+                justify-content: center; /* Alinha os itens ao centro */
+            }
+
+            nav ul li {
+                margin: 5px; /* Espaçamento menor entre os itens */
+            }
+
+            nav ul li a {
+                font-size: 18px; /* Tamanho da fonte menor */
+                padding: 7px; /* Espaçamento interno menor */
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="form-container">
-        <h1>Informações Adicionais</h1>
-        <h4>Por favor, digite o seu nome</h4>
-        <form id="infoForm" action="obrigado.html">
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        <h1>Informações do Cliente</h1>
+		<h4>Por favor digite o seu nome</h4>
+        <form id="clientForm">
+            <input type="text" id="clientName" name="clientName" placeholder="Digite seu nome" required>
             <button type="submit">Enviar</button>
         </form>
     </div>
 
     <script>
-        document.getElementById('infoForm').addEventListener('submit', function(event) {
+        document.getElementById('clientForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            const clientName = document.getElementById('nome').value;
+            const clientName = document.getElementById('clientName').value;
             const urlParams = new URLSearchParams(window.location.search);
             const servico = urlParams.get('servico');
             const message = `Olá, meu nome é ${clientName}. Gostaria de mais informações sobre ${servico}.`;
@@ -80,4 +105,5 @@
         });
     </script>
 </body>
+
 </html>
