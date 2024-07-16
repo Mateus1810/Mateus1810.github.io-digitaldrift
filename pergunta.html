@@ -99,7 +99,7 @@
             const clientName = document.getElementById('clientName').value;
             const urlParams = new URLSearchParams(window.location.search);
             const servico = urlParams.get('servico');
-            const message = `Olá, meu nome é ${clientName}. Gostaria de mais informações sobre ${servico}.`;
+            const message = `Olá, meu nome é ${clientName}. Gostaria de mais informações sobre o serviço de ${servico}.`;
             const whatsappUrl = `https://wa.me/5533984024108?text=${encodeURIComponent(message)}`;
             window.location.href = whatsappUrl;
         });
