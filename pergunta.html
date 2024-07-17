@@ -25,7 +25,7 @@
         }
 
         .form-container {
-            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+            background-color: rgba(215, 215, 215, 0.9); /* Fundo branco com transparência */
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -84,6 +84,7 @@
 </head>
 
 <body>
+<div class="borda-exemplo">
     <div class="form-container">
         <h1>Informações do Cliente</h1>
 		<h4>Por favor digite o seu nome</h4>
@@ -92,8 +93,7 @@
             <button type="submit">Enviar</button>
         </form>
     </div>
-
-    <script>
+	<script>
         document.getElementById('clientForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const clientName = document.getElementById('clientName').value;
