@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações sobre Montagem - Digital Drift Soluções</title>
+    <link rel="stylesheet" href="styles.css">
+   <style>
+     body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('img/forza-horizon-5-car-drift-4k-wallpaper-uhdpaper.com-34@0@e.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+			}
+
+    .roboto-bold {
+        font-weight: 700;
+    }
+
+    .roboto-medium {
+        font-weight: 500;
+    }
+
+    .roboto-regular {
+        font-weight: 400;
+    }
+
+   header {
+            background-color: rgba(19, 35, 60, 0.6);
+            color: #fff;
+            padding: 5px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+        display: flex; /* Torna os itens de navegação em linha */
+        justify-content: center; /* Alinha os itens ao centro */
+    }
+
+    nav ul li {
+        display: inline-block; /* Exibe os itens como blocos em linha */
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        display: block; /* Transforma o link em bloco para ocupar todo o espaço do li */
+        padding: 10px; /* Adiciona espaço interno ao redor do texto */
+    }
+
+    nav ul li a:hover {
+        color: cyan;
+    }
+
+    section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            margin: 50px auto;
+            border-radius: 5px;
+            text-align: center;
+            width: 50%;
+            max-width: 500px;
+            max-height: 330px; /* Define a altura máxima */
+            flex-grow: 1; /* Faz o section crescer para ocupar o espaço disponível */
+        }
+
+    input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #26ab05;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    /* Media query para telas menores, como smartphones */
+    @media only screen and (max-width: 400px) {
+        nav ul {
+            flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo */
+            justify-content: center; /* Alinha os itens ao centro */
+        }
+
+        nav ul li {
+            margin: 5px; /* Espaçamento menor entre os itens */
+        }
+
+        nav ul li a {
+            font-size: 18px; /* Tamanho da fonte menor */
+            padding: 7px; /* Espaçamento interno menor */
+        }
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <h1 class="roboto-bold">Montagem de <BR>
+		Computador Novo </BR></h1>
+    </header>
+
+    <section>
+        <h2 class="roboto-medium">Por favor, informe a intenção de uso e o valor que tem em mente</h2>
+        <form id="montagemForm">
+            <input type="text" id="intencaoUso" name="intencaoUso" placeholder="Intenção de uso do computador" required>
+            <input type="text" id="valor" name="valor" placeholder="Valor disponível" required>
+            <input type="hidden" id="servico" name="servico" value="montagem de computador novo">
+            <p><button type="submit">Enviar</button></p>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('montagemForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const intencaoUso = document.getElementById('intencaoUso').value;
+            const valor = document.getElementById('valor').value;
+            const servico = document.getElementById('servico').value;
+            const queryParams = new URLSearchParams({ intencaoUso, valor, servico }).toString();
+            window.location.href = `nome_mont.html?${queryParams}`;
+        });
+    </script>
+</body>
+</html>

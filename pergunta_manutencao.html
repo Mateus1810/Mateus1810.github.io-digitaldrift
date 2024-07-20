@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Problema - Digital Drift Soluções</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('img/forza-horizon-5-car-drift-4k-wallpaper-uhdpaper.com-34@0@e.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        roboto-bold {
+            font-weight: 700;
+        }
+
+        .roboto-medium {
+            font-weight: 500;
+        }
+
+        .roboto-regular {
+            font-weight: 400;
+        }
+
+        header {
+            background-color: rgba(19, 35, 60, 0.4);
+            color: #fff;
+            padding: 5px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            margin: 50px auto;
+            border-radius: 5px;
+            text-align: center;
+            width: 50%;
+            max-width: 400px;
+            max-height: 230px; /* Define a altura máxima */
+            flex-grow: 1; /* Faz o section crescer para ocupar o espaço disponível */
+        }
+		input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            background-color: #26ab05;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+		/* Media query para telas menores, como smartphones */
+    @media only screen and (max-width: 500px) {
+        nav ul {
+            flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo */
+            justify-content: center; /* Alinha os itens ao centro */
+        }
+
+        nav ul li {
+            margin: 5px; /* Espaçamento menor entre os itens */
+        }
+
+        nav ul li a {
+            font-size: 18px; /* Tamanho da fonte menor */
+            padding: 7px; /* Espaçamento interno menor */
+        }
+    }
+    </style>
+</head>
+<body>
+<header>
+<h1 class="roboto-bold">Manutenção de Computadores</h1>
+</header>
+<section>
+    <div class="form-container">
+        <h1>Informações sobre o Problema</h1>
+        <h4 class=roboto-medium>Por favor digite o problema</h4>
+        <form id="manutencaoForm">
+            <input type="text" id="problema" name="problema" placeholder="Digite seu problema" required>
+            <input type="hidden" id="servico" name="servico" value="manutenção de computadores"> <!-- Campo oculto para o serviço -->
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+   </section>
+    <script>
+        document.getElementById('manutencaoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const problema = document.getElementById('problema').value;
+            const servico = document.getElementById('servico').value;
+            const queryParams = new URLSearchParams({ problema, servico }).toString();
+            window.location.href = `nome_manu.html?${queryParams}`;
+        });
+    </script>
+</body>
+</html>

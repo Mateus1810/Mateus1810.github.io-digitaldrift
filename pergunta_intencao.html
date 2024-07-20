@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha o Serviço - Digital Drift Soluções</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('img/forza-horizon-5-car-drift-4k-wallpaper-uhdpaper.com-34@0@e.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(19, 35, 60, 0.2);
+            color: #fff;
+            padding: 5px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.6);
+            margin: 50px auto;
+            border-radius: 5px;
+            text-align: center;
+            width: 50%;
+            max-width: 300px;
+            max-height: 200px; /* Define a altura máxima */
+            flex-grow: 1; /* Faz o section crescer para ocupar o espaço disponível */
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            background-color: #26ab05;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="roboto-bold">Montagem e Upgrade de Computadores</h1>
+    </header>
+
+    <section>
+        <h2 class="roboto-medium">Qual serviço deseja?</h2>
+        <div class="form-container">
+            <button onclick="selectOption('sim')">Upgrade de Computador</button>
+            <button onclick="selectOption('nao')">Montagem de Computador Novo</button>
+        </div>
+    </section>
+
+        <script>
+        function selectOption(option) {
+            if (option === 'sim') {
+                window.location.href = 'pergunta_upgrade.html';
+            } else {
+                window.location.href = 'pergunta_montagem.html';
+            }
+        }
+    </script>
+</body>
+</html>
