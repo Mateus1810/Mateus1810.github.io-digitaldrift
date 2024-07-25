@@ -78,6 +78,34 @@
             margin: 20px;
             border-radius: 5px;
         }
+ .catalogue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.catalogue-item {
+   border: 1px rgba(187, 187, 187, 1.0); /* Corrigido para incluir 'solid' */
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Manter a opacidade original */
+    width: 250px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.catalogue-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+    /* Removendo o cursor pointer para que não pareça clicável */
+}
+
+.catalogue-item a {
+    display: none; /* Esconder os links para que os itens não sejam clicáveis */
+}
 
         
 
@@ -118,6 +146,32 @@
     <section id="portfolio">
         <h2 class="roboto-medium" style="font-size: 2.5em;">Nosso Portfólio</h2>
         <p class="roboto-regular" style="font-size: 1.2em;">Confira abaixo alguns dos projetos recentes que desenvolvemos para nossos clientes.</p>
+		 <div class="catalogue">
+            <div class="catalogue-item">
+               <img src="img/20220902_133245.jpg" alt="Ícone">
+                </a>
+                <p>Formatação e intalação de um novo sistema operacional</p>
+            </div>
+			<div class="catalogue-item">
+               <img src="img/Screenshot_20221222-142126_Gallery.jpg" alt="Ícone">
+                </a>
+                <p>Montagem completa de um computador novo</p>
+            </div>
+			<div class="catalogue-item">
+               <img src="img/20220213_094921.jpg" alt="Ícone">
+                </a>
+                <p>Instalação do pacote office e upgrade</p>
+            </div>
+			<div class="catalogue-item">
+               <img src="img/20220329_101659.jpg" alt="Ícone">
+                </a>
+                <p>Manutenção preventiva e limpeza</p>
+            </div>
+			<div class="catalogue-item">
+               <img src="img/273051965_201025975541122_8519923515218445004_n.jpg" alt="Ícone">
+                </a>
+                <p>Formatação e limpeza</p>
+            </div>
         <!-- Incluir aqui a estrutura do portfólio -->
     </section>
 
