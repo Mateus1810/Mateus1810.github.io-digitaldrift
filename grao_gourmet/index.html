@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grão Gourmet - Cafeteria</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+  .catalogue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  /* Media query para telas menores, como smartphones */
+  @media only screen and (max-width: 500px) {
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 5px;
+    }
+
+    nav ul li a {
+      font-size: 18px;
+      padding: 7px;
+    }
+
+    /* Estilo para o botão */
+    .btn {
+      display: block; /* Certifique-se de que o botão seja um bloco */
+      width: 90%; /* Ajuste a largura do botão */
+      max-width: 300px; /* Largura máxima do botão */
+      margin: 0 auto; /* Centraliza o botão */
+      padding: 10px; /* Preenchimento interno */
+      text-align: center; /* Centraliza o texto do botão */
+      background-color: #28a745; /* Cor de fundo do botão */
+      color: white; /* Cor do texto */
+      border: none; /* Sem borda */
+      border-radius: 5px; /* Bordas arredondadas */
+      font-size: 16px; /* Tamanho da fonte */
+      cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <h1>Grão Gourmet <i class="fas fa-coffee"></i></h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre Nós</a></li>
+        <li><a href="#menu">Cardápio</a></li>
+        <li><a href="#gallery">Galeria</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <div class="welcome-text">
+        <h2>Bem-vindo ao Grão Gourmet</h2>
+        <p>O melhor café com o ambiente perfeito para relaxar.</p>
+        <a href="#menu" class="btn">Conheça nosso cardápio</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>Sobre Nós</h2>
+      <p>No Grão Gourmet, cada detalhe é pensado para proporcionar a melhor experiência com café.</p>
+      <div class="about-details">
+        <div class="about-item">
+          <i class="fas fa-seedling"></i>
+          <h3>Grãos Selecionados</h3>
+          <p>Nossos grãos são escolhidos de produtores especializados.</p>
+        </div>
+        <div class="about-item">
+          <i class="fas fa-mug-hot"></i>
+          <h3>Ambiente Aconchegante</h3>
+          <p>Desfrute de um espaço moderno e confortável.</p>
+        </div>
+        <div class="about-item">
+          <i class="fas fa-leaf"></i>
+          <h3>Sustentabilidade</h3>
+          <p>Estamos comprometidos com práticas ecológicas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2>Algumas coisas do nosso vasto cardápio</h2>
+      <ul class="menu-lista">
+        <li><i class="fas fa-coffee"></i> Café Espresso <span class="preco">R$5,00</span></li>
+        <li><i class="fas fa-mug-hot"></i> Capuccino <span class="preco">R$8,00</span></li>
+        <li><i class="fas fa-ice-cream"></i> Café Gelado <span class="preco">R$7,50</span></li>
+        <li><i class="fas fa-birthday-cake"></i> Bolo de Cenoura <span class="preco">R$4,50</span></li>
+        <li><i class="fas fa-bread-slice"></i> Torrada com Manteiga <span class="preco">R$3,00</span></li>
+        <li><i class="fas fa-cookie"></i> Cookie de Chocolate <span class="preco">R$4,00</span></li>
+        <li><i class="fas fa-utensils"></i> Sanduíche Natural <span class="preco">R$9,00</span></li>
+        <li><i class="fas fa-leaf"></i> Salada de Frutas <span class="preco">R$6,50</span></li>
+        <li><i class="fas fa-pizza-slice"></i> Pedaço de Pizza <span class="preco">R$7,00</span></li>
+        <li><i class="fas fa-cheese"></i> Queijo Quente <span class="preco">R$4,50</span></li>
+        <li><i class="fas fa-glass-martini-alt"></i> Suco Natural <span class="preco">R$6,00</span></li>
+        <li><i class="fas fa-hamburger"></i> Cheeseburger <span class="preco">R$12,00</span></li>
+      </ul>
+    </section>
+
+    <section id="gallery">
+      <h2>Galeria de Fotos</h2>
+      <div class="gallery-grid">
+        <img src="https://blog.nagumo.com.br/wp-content/uploads/2024/04/receitas-com-cafe-bolo.jpg" alt="Café e bolos">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/9d/79/0f/caption.jpg?w=500&h=500&s=1"
+          alt="Ambiente do Grão Gourmet">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_912326-MLB46331907856_062021-O.webp" alt="Capuccino gourmet">
+        <img src="https://files.oaiusercontent.com/file-Fg5g0eFr0FnavWWERHU6hwv2?se=2024-10-23T01%3A40%3A31Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D1f7d2ce1-8467-4629-a96d-0af7647936cc.webp&sig=eOQ7c4RXLF5bxPi6fttwW1V7lSQo7nSuqvCPmTp5d8U%3D"
+          alt="Barista preparando café">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contato</h2>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:contato@graogourmet.com.br">contato@graogourmet.com.br</a></p>
+        <p><i class="fas fa-phone"></i> Telefone: <a href="tel:+5511987654321">(11) 98765-4321</a></p>
+        <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua dos Cafés, 123 - São Paulo, SP</p>
+         <p><i class="fa-regular fa-clock"></i> Horário de funcionamento:</p>
+        <p>Segunda a Sexta <br> Das 05:30 às 19:00</p>
+        <p>Sábado, Domingo e Feriados <br> Das 06:00 às 16:00</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Grão Gourmet. Todos os direitos reservados.</p>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
